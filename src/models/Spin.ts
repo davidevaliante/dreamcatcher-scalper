@@ -15,7 +15,7 @@ export class Spin {
 
         public multiplier : string,
 
-        public specialmultiplier : string,
+        public specialMultiplier : string,
        
         public totalWinners : number,
 

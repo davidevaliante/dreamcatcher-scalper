@@ -26,6 +26,8 @@ const scrap = async (browser : puppeteer.Browser) => {
 
     const formattedRows = await scrapTable(tableRows, browser)  
 
+    // console.log(formattedRows)
+
     pushRows(formattedRows)
 }
 
