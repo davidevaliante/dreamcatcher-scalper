@@ -41,13 +41,13 @@ export const scrapTable = async (tableRows : Node[], browser : puppeteer.Browser
             if(index == 3){
                 const fourthCell = cell
                 const boardRollValue = fourthCell.childNodes[0].rawText.trim()
-                newSpin.specialmultiplier = boardRollValue
+                newSpin.specialMultiplier = boardRollValue
             }
             
             // Total Winners
             if(index == 4){
                 const fifthCell = cell
-                if(newSpin.specialmultiplier === ''){
+                if(newSpin.specialMultiplier === ''){
                     const totalWinnersValue = parseInt(fifthCell.childNodes[0].rawText.trim().replace(',', '').replace('€', ''))
                     newSpin.totalWinners = totalWinnersValue
                 }
@@ -56,7 +56,7 @@ export const scrapTable = async (tableRows : Node[], browser : puppeteer.Browser
             // Total Payout
             if(index == 5){
                 const sixthCell = cell
-                if(newSpin.specialmultiplier === ''){
+                if(newSpin.specialMultiplier === ''){
                     const totalPayout = parseInt(sixthCell.childNodes[0].rawText.trim().replace(',', '').replace('€', ''))
                     newSpin.totalPayout = totalPayout
                 }
